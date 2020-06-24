@@ -1,0 +1,35 @@
+<html>
+
+<body>
+    
+    
+</body>
+</html>
+{% extends 'Transportation_office/base.html' %}
+
+{% block content %}
+      
+
+{% for i in transport %}
+
+<table class="table table-striped" border="8">
+    <h3>اسم السائق ({{ i.cardriver_id.driversName }}) </h3>
+    <tr>
+       
+        <th scope="col">اسم المكتب</th>
+        <td>{{ i.nameOf_office }}</td>
+        <th scope="col">موقع المكتب</th>
+        <td>{{ i.officeLocation }}</td>
+        <th scope="col">تلفون المكتب</th>
+        <td>{{ i.officePhone}}</td>
+        <th scope="col">النقل من</th>
+        <td>{{ i.TransportFrom }}</td>
+        <th scope="col">النقل إلى</th>        
+        <td>{{ i.TransportTo }}</td>
+        <th scope="col">الثمن</th>
+        <td>{{ i.price }}</td>
+    </tr>
+    
+    
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,38 @@
+<html>
+
+</html>
+{% extends 'Transportation_office/base.html' %}
+
+{% block content %}
+<header>
+<table class="table table-sm table-striped table-hover" border="8">
+    <thead>
+      <tr class="row-dark">
+        
+        <th scope="col">اسم السائق</th>
+        <th scope="col"> تلفون السائق </th>
+        <th scope="col">نوع السيارة</th>
+        <th scope="col">لون السيارة</th>
+        <th scope="col">رقم السيارة</th>
+        <th scope="col">حالة السيارة</th>
+      </tr>
+    </thead>
+    
+  {% for i in form1 %}
+        <tr>
+          
+          <td>
+             <a>{{ i.driversName }}</a>
+        
+          </td>
+          <td>{{ i.phone }}</td>
+          <td>{{ i.carType }}</td>
+          <td>{{ i.carColor}}</td>
+          <td>{{ i.carNumber }}</td>
+          <td>{{ i.carStatus }}</td>
+        </tr>
+  {% endfor %}
+</table>
+  
+  {% endblock content %}
+  

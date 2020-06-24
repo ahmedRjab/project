@@ -1,0 +1,40 @@
+<html>
+</html>
+<title>مكتب نقليات</title>
+{% extends 'Transportation_office/base.html' %}
+{% block content %}  
+<table class="table table-sm table-striped table-hover" border="8">
+      
+       <thead>
+        
+        <tr>
+           
+          <th scope="col">اسم المكتب</th>
+          <th scope="col">موقع المكتب</th>
+          <th scope="col">تلفون المكتب</th>
+          <th scope="col">النقل من</th>
+          <th scope="col">النقل إلى</th>
+          <th scope="col">الثمن</th>
+        </tr>
+        
+       </thead>
+      
+         {% for i in transporta %}
+        
+       <tr>
+        
+        
+        <td>{{ i.nameOf_office }}</td>
+        <td>{{ i.officeLocation }}</td>
+        <td>{{ i.officePhone}}</td>
+        <td>{{ i.TransportFrom }}</td>
+        <td>{{ i.TransportTo }}</td>
+        <td>{{ i.price }}</td>
+       </tr>
+   {% endfor %}
+  </table>
+<footer>
+  
+</footer>
+{% endblock content %}
+
